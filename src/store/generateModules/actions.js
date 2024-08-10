@@ -37,7 +37,8 @@ export default {
     const upperCaseInput = document.querySelector("input[type='checkbox'][id='upper-case']")
     if (
       (!lowerCaseInput.checked && !upperCaseInput.checked && context.state.noDuplicate) ||
-      context.state.checkboxes.length === 0
+      context.state.checkboxes.length === 0 ||
+      context.state.passwordLength > 26
     ) {
       context.commit('displayAlert', true)
       return

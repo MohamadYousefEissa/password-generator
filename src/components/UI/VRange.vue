@@ -29,12 +29,12 @@ label {
 input {
   width: 100%;
   outline: 0;
-  accent-color: rgba(225, 225, 225, 0.3);
+  accent-color: var(--main-clr);
   opacity: 0.5;
   margin-bottom: 1rem;
 }
 html[data-theme='light'] input {
-  accent-color: var(--main-clr);
+  accent-color: var(--third-clr);
   opacity: 1;
 }
 div {

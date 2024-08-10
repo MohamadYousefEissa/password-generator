@@ -5,6 +5,7 @@
       class="theme-btn"
       name="theme-btn"
       id="theme-btn"
+      aria-label="hidden"
       v-model="themeInput"
       @change="changeTheme"
     />

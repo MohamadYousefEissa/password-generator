@@ -44,7 +44,7 @@ input::before {
 }
 input:checked::before {
   content: '\F272';
-  background: var(--sec-clr);
+  background: var(--third-clr);
   border: 1px solid transparent;
   display: flex;
   align-items: start;

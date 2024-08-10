@@ -8,7 +8,7 @@ button {
   outline: 0;
   width: 100%;
   margin-top: 2rem;
-  background: var(--sec-clr);
+  background: var(--third-clr);
   color: #fff;
   padding: 6px 0;
   border-radius: 6px;

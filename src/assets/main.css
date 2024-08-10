@@ -1,8 +1,9 @@
 :root {
   --main-clr: rgb(200, 200, 200);
-  --sec-clr: rgb(130, 130, 130);
-  --box-bg: rgb(40, 40, 40);
-  --body-bg: #111;
+  --sec-clr: rgb(160, 160, 160);
+  --third-clr: rgb(60, 60, 60);
+  --box-bg: #111;
+  --body-bg: #1e1e1e;
 }
 body {
   background-color: var(--body-bg);
@@ -18,6 +19,7 @@ body {
 html[data-theme='light'] {
   --main-clr: #000;
   --sec-clr: rgb(35, 35, 35);
+  --third-clr: #111;
   --box-bg: #fff;
   --body-bg: whitesmoke;
 }
@@ -26,7 +28,7 @@ html[data-theme='light'] #box {
   box-shadow: 0 0 30px grey;
 }
 .tippy-box[data-theme~='copied'] {
-  background: var(--sec-clr);
+  background: var(--third-clr);
   color: #fff;
   padding: 3px 5px;
   border-radius: 5px;

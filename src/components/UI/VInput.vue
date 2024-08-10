@@ -1,6 +1,6 @@
 <template>
   <div class="px-1 mt-4">
-    <input type="text" name="password" id="password" readonly ref="password" />
+    <input type="text" name="password" id="password" aria-label="hidden" readonly ref="password" />
     <button title="copy" id="copy-btn" @click="copyPassword">
       <IconCopy />
     </button>

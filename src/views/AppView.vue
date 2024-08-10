@@ -1,13 +1,15 @@
 <template>
   <icon-theme></icon-theme>
-  <v-box>
-    <v-title></v-title>
-    <v-input></v-input>
-    <v-range></v-range>
-    <v-alert :showAlert="showAlert">Check one of these two boxes at least</v-alert>
-    <password-settings></password-settings>
-    <v-button @click="$store.dispatch('generateRandomChars')"></v-button>
-  </v-box>
+  <transition name="fade-down">
+    <v-box v-if="activeAnim">
+      <v-title></v-title>
+      <v-input></v-input>
+      <v-range></v-range>
+      <v-alert :showAlert="showAlert">Check one of these two boxes at least</v-alert>
+      <password-settings></password-settings>
+      <v-button @click="$store.dispatch('generateRandomChars')"></v-button>
+    </v-box>
+  </transition>
   <copy-right></copy-right>
 </template>
 <script>
@@ -32,10 +34,39 @@ export default {
     VAlert,
     CopyRight
   },
+  data() {
+    return {
+      activeAnim: false
+    }
+  },
   computed: {
     showAlert() {
       return this.$store.getters.showAlert
     }
+  },
+  mounted() {
+    window.onload = () => {
+      setTimeout(() => {
+        this.activeAnim = true
+      }, 300)
+    }
   }
 }
 </script>
+
+<style scoped>
+.fade-down-enter-active {
+  animation: fade-down 1s;
+}
+
+@keyframes fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>

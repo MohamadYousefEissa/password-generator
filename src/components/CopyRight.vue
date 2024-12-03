@@ -1,8 +1,6 @@
 <template>
   <teleport to="body">
-    <p>
-      Powered by Mohamad Yousef Eissa &copy; {{ new Date().getFullYear() }} | All rights reserved
-    </p>
+    <p>Powered by Mohamad Yousef Eissa &copy; 2024 | All rights reserved</p>
   </teleport>
 </template>
 
